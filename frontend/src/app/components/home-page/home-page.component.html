@@ -10,8 +10,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of watchListArr">
-        <td>{{ item.result.alive }}</td>
+      <tr
+        *ngFor="let item of watchListArr"
+        [class.alive]="item.result.alive"
+        [class.dead]="!item.result.alive"
+      >
+        <td>{{ item.result.alive ? "UP" : "DOWN" }}</td>
         <td>{{ item.timestamp | date: "yyyy-MM-dd hh:mm:ss" }}</td>
         <td>{{ item.host }}</td>
         <td>{{ item.result.numeric_host }}</td>

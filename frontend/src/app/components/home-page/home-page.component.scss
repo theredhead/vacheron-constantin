@@ -1,0 +1,21 @@
+table {
+  border-collapse: collapse;
+
+  thead {
+    font-weight: normal;
+    text-align: left;
+  }
+  tbody {
+    tr {
+      &.alive {
+        border: solid 1px green;
+      }
+      &.dead {
+        border: solid 1px red;
+      }
+      td {
+        padding: .25ch 1ch;
+      }
+    }
+  }
+}

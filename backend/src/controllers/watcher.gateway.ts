@@ -9,10 +9,11 @@ import {
 import { Socket, Server } from 'socket.io';
 import * as ping from 'ping';
 
-const TIME_BETWEEN_PINGS = 10000;
+const TIME_BETWEEN_PINGS = 500;
 
 const hosts: string[] = [
   '127.0.0.1',
+  'nosuch.site',
   'google.com',
   'wikipedia.com',
   'apple.com',
