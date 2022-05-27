@@ -1,1 +1,22 @@
-<p>home-page works!</p>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Alive?</th>
+        <th>Last probe</th>
+        <th>host</th>
+        <th>IP</th>
+        <th>time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of watchListArr">
+        <td>{{ item.result.alive }}</td>
+        <td>{{ item.timestamp | date: "yyyy-MM-dd hh:mm:ss" }}</td>
+        <td>{{ item.host }}</td>
+        <td>{{ item.result.numeric_host }}</td>
+        <td>{{ item.result.time }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
